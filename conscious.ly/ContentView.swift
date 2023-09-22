@@ -9,53 +9,50 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @State private var username:String = ""
+    @State private var password:String = ""
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
+        VStack(alignment:.center){
+            authLogo
+            authInputs
+            loginButton
         }
     }
+    
+    
+    
+    
+    
+    
+    var authLogo : some View {
+        Image("consciously")
+            .resizable()
+            .frame(width:115, height:120).padding([.bottom],20)
+    }
+    var authInputs : some View {
+        Group{
+            HStack {
+                Image(systemName: "person").foregroundStyle(.gray)
+                TextField("User name",text:$username).padding(.vertical,5)
+            }
+            HStack {
+                Image(systemName: "lock").foregroundStyle(.gray)
+                SecureField("Password",text:$password).padding(.vertical,5)
+            }
+        }.padding([.leading, .trailing], 30)
+    }
+    
+    var loginButton : some View {
+        Button ("SIGN IN"){}
+            .buttonStyle(.bordered).foregroundStyle(.black)
+        .buttonBorderShape(.capsule)
+        
+        }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
-    }
+    
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
