@@ -24,7 +24,7 @@ struct Consciously: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }
