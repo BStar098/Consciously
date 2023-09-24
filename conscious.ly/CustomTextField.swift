@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomTextField: View  {
-    @State var value : String = ""
+    @Binding var value : String;
     var type : String = ""
     var icon : String = "person"
     var placeholder : String = "Soy un placeholder"
@@ -46,7 +46,9 @@ struct CustomTextField: View  {
                                 .padding(.trailing, 5)
                                 .foregroundStyle(Color(.init(white:3,alpha:0.87)))
                                 input
-                                    .foregroundStyle(Color(.init(white:3,alpha:0.87)))
+                                .foregroundStyle(Color(.init(white:3,alpha:0.87)))
+                                .textInputAutocapitalization(.never)
+                            
                         }
                             .padding()
                             .background(Color(.init(white:1,alpha:0.18)))
@@ -57,6 +59,4 @@ struct CustomTextField: View  {
     }
 }
 
-#Preview {
-    CustomTextField()
-}
+

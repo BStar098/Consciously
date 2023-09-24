@@ -9,9 +9,11 @@ import SwiftUI
 import SwiftData
 
 struct LoginView: View {
-    @State private var username:String = ""
-    @State private var password:String = ""
+    let viewModel = AuthViewModel()
+    @State var email:String = "";
+    @State var password:String = "";
 
+    
     var body: some View {
         ZStack{
             Color.black
@@ -33,22 +35,24 @@ struct LoginView: View {
             .padding([.horizontal],20)
     }
     var authInputs : some View {
-        Group{
-            CustomTextField(value: username, type: "text", icon: "person", placeholder: "John Doe", label: "Username")
-            CustomTextField(value: password, type: "password", icon: "lock", placeholder: "********", label: "Password")
+        VStack
+        {
+            CustomTextField(value: $email, type: "text", icon: "person", placeholder: "John Doe", label: "Email")
+            CustomTextField(value: $password, type: "password", icon: "lock", placeholder: "********", label: "Password")
         }
     }
     
     var loginButton : some View {
-        Button ("LOG IN"){}
+        Button ("LOG IN"){
+            withAnimation {
+                viewModel.logIn(email:email, password:password)
+            }
+        }
             .frame(width:100,height:33)
             .foregroundStyle(.black)
             .background(Color(.init(white:3, alpha:0.80)))
             .clipShape(.capsule)
-
-
-        
-        }
+    }
 
     
 }
