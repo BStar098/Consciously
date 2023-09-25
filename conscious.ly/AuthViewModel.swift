@@ -11,15 +11,22 @@ import Firebase
 import SwiftUI
 
 
-final class AuthViewModel {
-    private var authenticated : Bool = false
+final class AuthViewModel: ObservableObject {
+    @Published var authenticated : Bool = false
+    @Published var errorMessage : String? = "";
+    @Published var showAlert: Bool = false;
+
+    
     
     func logIn (email:String, password:String){
         Auth.auth().signIn(withEmail: email, password: password) {authResult, error in
             if error != nil {
-                print(error as Any)
+                if let error = error {
+                    self.errorMessage = error.localizedDescription
+                    self.showAlert = true
+                }
             } else {
-                print(authResult as Any)
+                self.errorMessage = nil
                 self.authenticated = true
             }
         }
@@ -28,9 +35,9 @@ final class AuthViewModel {
     func signUp (email:String, password:String){
         Auth.auth().createUser(withEmail: email, password: password) {authResult, error in
             if error != nil {
-                print(error as Any)
+                
             } else {
-                print(authResult as Any)
+                print(authResult ?? "")
             }
             
         }

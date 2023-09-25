@@ -9,19 +9,22 @@ import SwiftUI
 import SwiftData
 
 struct LoginView: View {
-    let viewModel = AuthViewModel()
+    @ObservedObject var viewModel = AuthViewModel()
     @State var email:String = "";
     @State var password:String = "";
-
     
     var body: some View {
         ZStack{
             Color.black
                 .ignoresSafeArea()
             VStack(alignment:.center){
-                authLogo.padding(.vertical)
+                authLogo
                 authInputs
-                loginButton.padding(.vertical)
+                loginButton
+            }.alert(viewModel.errorMessage ?? "",isPresented: $viewModel.showAlert){
+                Button("OK", role:.cancel){
+                    
+                }
             }
         }
        
@@ -33,6 +36,7 @@ struct LoginView: View {
             .resizable()
             .aspectRatio(contentMode: .fit)
             .padding([.horizontal],20)
+            .padding(.vertical)
     }
     var authInputs : some View {
         VStack
@@ -52,6 +56,7 @@ struct LoginView: View {
             .foregroundStyle(.black)
             .background(Color(.init(white:3, alpha:0.80)))
             .clipShape(.capsule)
+            .padding(.vertical)
     }
 
     
