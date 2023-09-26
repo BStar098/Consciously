@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		326C47AE2ABE680600238BCA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C47AD2ABE680600238BCA /* CustomTextField.swift */; };
-		326C47B02ABF9A2400238BCA /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C47AF2ABF9A2400238BCA /* AuthModel.swift */; };
+		326C47B02ABF9A2400238BCA /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C47AF2ABF9A2400238BCA /* AuthViewModel.swift */; };
+		326C47EA2AC0E79700238BCA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C47E92AC0E79700238BCA /* User.swift */; };
 		3290A3852ABD171000399F13 /* Consciously.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3290A3842ABD171000399F13 /* Consciously.swift */; };
 		3290A3872ABD171000399F13 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3290A3862ABD171000399F13 /* LoginView.swift */; };
 		3290A38B2ABD171300399F13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3290A38A2ABD171300399F13 /* Assets.xcassets */; };
@@ -45,7 +46,8 @@
 
 /* Begin PBXFileReference section */
 		326C47AD2ABE680600238BCA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		326C47AF2ABF9A2400238BCA /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		326C47AF2ABF9A2400238BCA /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		326C47E92AC0E79700238BCA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3290A3812ABD171000399F13 /* conscious.ly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = conscious.ly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3290A3842ABD171000399F13 /* Consciously.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consciously.swift; sourceTree = "<group>"; };
 		3290A3862ABD171000399F13 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		326C47E82AC0E78600238BCA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				326C47E92AC0E79700238BCA /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3290A3782ABD171000399F13 = {
 			isa = PBXGroup;
 			children = (
@@ -111,10 +121,11 @@
 		3290A3832ABD171000399F13 /* conscious.ly */ = {
 			isa = PBXGroup;
 			children = (
+				326C47E82AC0E78600238BCA /* Model */,
 				3290A3942ABD30D400399F13 /* GoogleService-Info.plist */,
 				3290A3842ABD171000399F13 /* Consciously.swift */,
 				3290A3862ABD171000399F13 /* LoginView.swift */,
-				326C47AF2ABF9A2400238BCA /* AuthModel.swift */,
+				326C47AF2ABF9A2400238BCA /* AuthViewModel.swift */,
 				326C47AD2ABE680600238BCA /* CustomTextField.swift */,
 				3290A38A2ABD171300399F13 /* Assets.xcassets */,
 				3290A38C2ABD171300399F13 /* Preview Content */,
@@ -236,7 +247,8 @@
 				326C47AE2ABE680600238BCA /* CustomTextField.swift in Sources */,
 				3290A3872ABD171000399F13 /* LoginView.swift in Sources */,
 				3290A3852ABD171000399F13 /* Consciously.swift in Sources */,
-				326C47B02ABF9A2400238BCA /* AuthModel.swift in Sources */,
+				326C47EA2AC0E79700238BCA /* User.swift in Sources */,
+				326C47B02ABF9A2400238BCA /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
