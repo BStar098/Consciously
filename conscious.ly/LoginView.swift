@@ -14,17 +14,26 @@ struct LoginView: View {
     @State var password:String = "";
     
     var body: some View {
-        ZStack{
-            Color.black
-                .ignoresSafeArea()
-            VStack(alignment:.center){
-                authLogo
-                authInputs
-                loginButton
-            }.alert(viewModel.errorMessage ?? "",isPresented: $viewModel.showAlert){
-                Button("OK", role:.cancel){
+        NavigationStack {
+            
+            ZStack{
+                Color.black
+                    .ignoresSafeArea()
+                    VStack {
+                            authLogo
+                            authInputs
+                            loginButton
+                            signUpButton
+                    }
+                    .alert(viewModel.errorMessage ?? "",isPresented: $viewModel.showAlert){
+                        Button("OK", role:.cancel){
+                        }
                     
                 }
+                
+                    
+               
+                
             }
         }
        
@@ -57,6 +66,17 @@ struct LoginView: View {
             .background(Color(.init(white:3, alpha:0.80)))
             .clipShape(.capsule)
             .padding(.vertical)
+    }
+    
+    var signUpButton : some View {
+            HStack {
+                    Text("Don't have an account?")
+                    NavigationLink(destination: SignUpView()){
+                    Text("Sign up")
+                        .fontWeight(.bold)
+                    }
+                }
+            .foregroundStyle(.white)
     }
 
     
