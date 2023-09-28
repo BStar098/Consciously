@@ -13,7 +13,8 @@ import SwiftUI
 
 final class AuthViewModel: ObservableObject {
     @Published var authenticated : Bool = false
-    @Published var errorMessage : String? = "";
+    @Published var loginErrorMessage : String? = "";
+    @Published var signUpErrorMessage : String? = "";
     @Published var showAlert: Bool = false;
 
     
@@ -22,11 +23,11 @@ final class AuthViewModel: ObservableObject {
         Auth.auth().signIn(withEmail: email, password: password) {authResult, error in
             if error != nil {
                 if let error = error {
-                    self.errorMessage = error.localizedDescription
+                    self.loginErrorMessage = error.localizedDescription
                     self.showAlert = true
                 }
             } else {
-                self.errorMessage = nil
+                self.loginErrorMessage = nil
                 self.authenticated = true
             }
         }
@@ -35,9 +36,12 @@ final class AuthViewModel: ObservableObject {
     func signUp (email:String, password:String){
         Auth.auth().createUser(withEmail: email, password: password) {authResult, error in
             if error != nil {
-                
+                if let error = error {
+                    self.signUpErrorMessage = error.localizedDescription
+                    self.showAlert = true
+                }
             } else {
-                print(authResult ?? "")
+                self.signUpErrorMessage = nil
             }
             
         }
