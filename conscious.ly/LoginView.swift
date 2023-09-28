@@ -23,12 +23,11 @@ struct LoginView: View {
                             authLogo
                             authInputs
                             loginButton
-                            signUpButton
                     }
-                    .alert(viewModel.errorMessage ?? "",isPresented: $viewModel.showAlert){
+                    .alert(viewModel.loginErrorMessage ?? "",isPresented: $viewModel.showAlert){
                         Button("OK", role:.cancel){
                         }
-                    
+
                 }
                 
                     
@@ -48,7 +47,7 @@ struct LoginView: View {
             .padding(.vertical)
     }
     var authInputs : some View {
-        VStack
+        VStack(spacing:15)
         {
             CustomTextField(value: $email, type: "text", icon: "person", placeholder: "John Doe", label: "Email")
             CustomTextField(value: $password, type: "password", icon: "lock", placeholder: "********", label: "Password")

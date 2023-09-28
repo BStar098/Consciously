@@ -31,7 +31,7 @@ struct CustomTextField: View  {
             VStack(alignment:.leading) {
                 VStack(alignment:.leading){
                     Text(label)
-                        .font(.title3)
+                        .fontWeight(.light)
                         .foregroundStyle(Color(.init(white:3,alpha:0.87)))
                     ZStack(alignment:.leading) {
                         if value.isEmpty {
