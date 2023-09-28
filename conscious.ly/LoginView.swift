@@ -27,7 +27,12 @@ struct LoginView: View {
                     .alert(viewModel.loginErrorMessage ?? "",isPresented: $viewModel.showAlert){
                         Button("OK", role:.cancel){
                         }
+
                 }
+                
+                    
+               
+                
             }
         }
        
@@ -60,6 +65,17 @@ struct LoginView: View {
             .background(Color(.init(white:3, alpha:0.80)))
             .clipShape(.capsule)
             .padding(.vertical)
+    }
+    
+    var signUpButton : some View {
+            HStack {
+                    Text("Don't have an account?")
+                    NavigationLink(destination: SignUpView()){
+                    Text("Sign up")
+                        .fontWeight(.bold)
+                    }
+                }
+            .foregroundStyle(.white)
     }
 
     

@@ -72,6 +72,7 @@ struct SignUpView: View {
             .clipShape(.capsule)
             .padding(.vertical)
     }
+
 }
 
 #Preview {
