@@ -6,9 +6,18 @@
 //
 
 import Foundation
+import SwiftData
 
-struct User : Identifiable, Codable {
+@Model
+final class User {
     let id : String;
     let fullname : String;
     let email : String;
+    
+    init(id: String, fullname: String, email: String) {
+        self.id = id
+        self.fullname = fullname
+        self.email = email
+    }
+    
 }

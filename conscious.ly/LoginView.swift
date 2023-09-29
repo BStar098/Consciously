@@ -25,15 +25,11 @@ struct LoginView: View {
                             loginButton
                             signUpButton
                     }
-                    .alert(viewModel.loginErrorMessage ?? "",isPresented: $viewModel.showAlert){
+                    .alert(viewModel.loginMessage,isPresented: $viewModel.showAlert){
                         Button("OK", role:.cancel){
                         }
 
                 }
-                
-                    
-               
-                
             }
         }
        
