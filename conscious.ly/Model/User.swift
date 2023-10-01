@@ -6,10 +6,8 @@
 //
 
 import Foundation
-import SwiftData
 
-@Model
-final class User {
+struct User : Identifiable, Codable {
     let id : String;
     let fullname : String;
     let email : String;

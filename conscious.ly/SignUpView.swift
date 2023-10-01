@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @ObservedObject var viewModel = AuthViewModel()
+    @EnvironmentObject var viewModel : AuthViewModel;
     @State var name:String = "";
     @State var surname:String = "";
     @State var email:String = "";

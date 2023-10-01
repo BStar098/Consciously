@@ -9,13 +9,12 @@ import SwiftUI
 import SwiftData
 
 struct LoginView: View {
-    @ObservedObject var viewModel = AuthViewModel()
+    @EnvironmentObject var viewModel : AuthViewModel
     @State var email:String = "";
     @State var password:String = "";
     
     var body: some View {
         NavigationStack {
-            
             ZStack{
                 Color.black
                     .ignoresSafeArea()
