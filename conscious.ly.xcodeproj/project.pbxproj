@@ -42,6 +42,8 @@
 		3290A3C82ABD315600399F13 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3290A3C72ABD315600399F13 /* FirebaseRemoteConfigSwift */; };
 		3290A3CA2ABD315600399F13 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3290A3C92ABD315600399F13 /* FirebaseStorage */; };
 		3290A3CC2ABD315600399F13 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 3290A3CB2ABD315600399F13 /* FirebaseStorageCombine-Community */; };
+		32C2E9182ACA0F41009FAA83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C2E9172ACA0F41009FAA83 /* ContentView.swift */; };
+		32C2E91A2ACA10AE009FAA83 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C2E9192ACA10AE009FAA83 /* HomeView.swift */; };
 		32E03F0B2AC2857700768603 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E03F0A2AC2857700768603 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		3290A38A2ABD171300399F13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3290A38D2ABD171300399F13 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3290A3942ABD30D400399F13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		32C2E9172ACA0F41009FAA83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		32C2E9192ACA10AE009FAA83 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		32E03F0A2AC2857700768603 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +130,8 @@
 				326C47E82AC0E78600238BCA /* Model */,
 				3290A3942ABD30D400399F13 /* GoogleService-Info.plist */,
 				3290A3842ABD171000399F13 /* Consciously.swift */,
+				32C2E9172ACA0F41009FAA83 /* ContentView.swift */,
+				32C2E9192ACA10AE009FAA83 /* HomeView.swift */,
 				3290A3862ABD171000399F13 /* LoginView.swift */,
 				32E03F0A2AC2857700768603 /* SignUpView.swift */,
 				326C47AF2ABF9A2400238BCA /* AuthViewModel.swift */,
@@ -249,8 +255,10 @@
 			files = (
 				326C47AE2ABE680600238BCA /* CustomTextField.swift in Sources */,
 				3290A3872ABD171000399F13 /* LoginView.swift in Sources */,
+				32C2E9182ACA0F41009FAA83 /* ContentView.swift in Sources */,
 				3290A3852ABD171000399F13 /* Consciously.swift in Sources */,
 				326C47EA2AC0E79700238BCA /* User.swift in Sources */,
+				32C2E91A2ACA10AE009FAA83 /* HomeView.swift in Sources */,
 				32E03F0B2AC2857700768603 /* SignUpView.swift in Sources */,
 				326C47B02ABF9A2400238BCA /* AuthViewModel.swift in Sources */,
 			);

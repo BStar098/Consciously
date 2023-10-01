@@ -12,12 +12,15 @@ import SwiftUI
 
 
 final class AuthViewModel: ObservableObject {
-    @Published var authenticated : Bool = false
+    @Published var userSession : FirebaseAuth.User?
+    @Published var currentUser : User?
     @Published var loginMessage : String = "";
     @Published var signUpMessage : String = "";
     @Published var showAlert: Bool = false;
 
-    
+    init (){
+        
+    }
     
     func logIn (email:String, password:String){
         Auth.auth().signIn(withEmail: email, password: password) {authResult, error in
@@ -27,7 +30,7 @@ final class AuthViewModel: ObservableObject {
                 }
             } else {
                 self.loginMessage = "Logged in successfully"
-                self.authenticated = true
+                self.currentUser = User(id: self.userSession?.uid ?? "", fullname: "Santi Lucero", email: self.userSession?.email ?? "")
             }
             self.showAlert = true
 
@@ -48,6 +51,11 @@ final class AuthViewModel: ObservableObject {
 
             
         }
+    }
+    
+    func logOut (){
+        self.userSession = nil
+        self.currentUser = nil
     }
     
 }
