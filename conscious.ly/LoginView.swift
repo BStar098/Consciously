@@ -52,9 +52,9 @@ struct LoginView: View {
     
     var loginButton : some View {
         Button ("LOG IN"){
-            withAnimation {
-                viewModel.logIn(email:email, password:password)
-            }
+                Task {
+                    try await viewModel.logIn(email:email, password:password)
+                }
         }
             .frame(width:100,height:33)
             .foregroundStyle(.black)

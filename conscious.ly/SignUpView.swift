@@ -62,8 +62,8 @@ struct SignUpView: View {
     
     var loginButton : some View {
         Button ("SIGN UP"){
-            withAnimation {
-                viewModel.signUp(email:email, password:password)
+                Task {
+                    try await viewModel.signUp(email:email, password:password)
             }
         }
             .frame(width:100,height:33)

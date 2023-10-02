@@ -10,7 +10,7 @@ import SwiftData
 import Firebase
 import SwiftUI
 
-
+@MainActor
 final class AuthViewModel: ObservableObject {
     @Published var userSession : FirebaseAuth.User?
     @Published var currentUser : User?
@@ -19,43 +19,38 @@ final class AuthViewModel: ObservableObject {
     @Published var showAlert: Bool = false;
 
     init (){
-        
+        self.userSession = Auth.auth().currentUser
     }
     
-    func logIn (email:String, password:String){
-        Auth.auth().signIn(withEmail: email, password: password) {authResult, error in
-            if error != nil {
-                if let error = error {
-                    self.loginMessage = error.localizedDescription
-                }
-            } else {
-                self.loginMessage = "Logged in successfully"
-                self.currentUser = User(id: self.userSession?.uid ?? "", fullname: "Santi Lucero", email: self.userSession?.email ?? "")
-            }
-            self.showAlert = true
-
+    func logIn (email:String, password:String) async throws {
+        do {
+            let result = try await Auth.auth().signIn(withEmail: email, password: password)
+            self.userSession = result.user
+            self.loginMessage = "Logged in successfully"
+        } catch {
+            self.loginMessage = error.localizedDescription
         }
+        self.showAlert = true
     }
     
-    func signUp (email:String, password:String){
-        Auth.auth().createUser(withEmail: email, password: password) {authResult, error in
-            if error != nil {
-                if let error = error {
-                    self.signUpMessage = error.localizedDescription
-                }
-            } else {
+    func signUp (email:String, password:String) async throws {
+            do {
+                try await Auth.auth().createUser(withEmail: email, password: password)
                 self.signUpMessage = "Signed up successfully"
-
+            } catch {
+                self.signUpMessage = error.localizedDescription
             }
             self.showAlert = true
-
-            
-        }
     }
     
-    func logOut (){
-        self.userSession = nil
-        self.currentUser = nil
+    func logOut () async throws {
+            do {
+                try Auth.auth().signOut()
+                self.userSession = nil
+            } catch {
+                throw error
+            }
     }
+    
     
 }

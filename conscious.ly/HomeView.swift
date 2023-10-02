@@ -13,11 +13,12 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text(viewModel.currentUser?.fullname ?? "")
+                Text(viewModel.userSession?.email ?? "")
                 Button ("LOG OUT"){
-                    withAnimation {
-                        viewModel.logOut()
+                    Task {
+                        try await viewModel.logOut()
                     }
+                      
                 }
             }
         }

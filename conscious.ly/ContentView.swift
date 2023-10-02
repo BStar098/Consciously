@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         Group {
-            if viewModel.currentUser != nil {
+            if viewModel.userSession != nil {
                 HomeView().transition(.slide)
             } else {
                 LoginView().transition(.slide)
