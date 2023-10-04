@@ -17,7 +17,7 @@ struct ContentView: View {
             } else {
                 LoginView().transition(.slide)
             }
-        }
+        }.animation(.bouncy, value:viewModel.userSession)
         
     }
 }

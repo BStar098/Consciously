@@ -26,11 +26,10 @@ final class AuthViewModel: ObservableObject {
         do {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
             self.userSession = result.user
-            self.loginMessage = "Logged in successfully"
         } catch {
             self.loginMessage = error.localizedDescription
+            self.showAlert = true
         }
-        self.showAlert = true
     }
     
     func signUp (email:String, password:String) async throws {
