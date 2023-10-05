@@ -11,21 +11,20 @@ struct HomeView: View {
     @EnvironmentObject var viewModel : AuthViewModel
     
     var body: some View {
-        NavigationStack {
-            VStack {
-                Text(viewModel.userSession?.email ?? "")
-                Button ("LOG OUT"){
-                    Task {
-                        try await viewModel.logOut()
-                    }
-                      
+            ZStack{
+                Color.black.ignoresSafeArea()
+                VStack {
+                    RecordCircle(text: "MORNING", duration: 3)
+                    RecordCircle(text: "AFTERNOON", duration: 5)
+                    RecordCircle(text: "NIGHT", duration: 7)
                 }
             }
-        }
+            
+        
        
     }
 }
 
 #Preview {
-    HomeView()
+    HomeView().environmentObject(AuthViewModel())
 }

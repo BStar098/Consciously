@@ -78,5 +78,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView()
+    LoginView().environmentObject(AuthViewModel())
 }
