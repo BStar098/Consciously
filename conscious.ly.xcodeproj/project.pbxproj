@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		324152882AD27D10000F738C /* AudioRecordingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324152872AD27D10000F738C /* AudioRecordingService.swift */; };
+		3241528B2AD28669000F738C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3241528A2AD28669000F738C /* Utils.swift */; };
 		326C47AE2ABE680600238BCA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C47AD2ABE680600238BCA /* CustomTextField.swift */; };
 		326C47B02ABF9A2400238BCA /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C47AF2ABF9A2400238BCA /* AuthViewModel.swift */; };
 		326C47EA2AC0E79700238BCA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C47E92AC0E79700238BCA /* User.swift */; };
@@ -76,6 +78,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		324152872AD27D10000F738C /* AudioRecordingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecordingService.swift; sourceTree = "<group>"; };
+		3241528A2AD28669000F738C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		326C47AD2ABE680600238BCA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		326C47AF2ABF9A2400238BCA /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		326C47E92AC0E79700238BCA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -156,6 +160,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		324152892AD27E30000F738C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				324152872AD27D10000F738C /* AudioRecordingService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		326C47E82AC0E78600238BCA /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +198,7 @@
 				326C47E82AC0E78600238BCA /* Model */,
 				3290A3942ABD30D400399F13 /* GoogleService-Info.plist */,
 				3290A3842ABD171000399F13 /* Consciously.swift */,
+				324152892AD27E30000F738C /* Services */,
 				32C2E9172ACA0F41009FAA83 /* ContentView.swift */,
 				32C2E9192ACA10AE009FAA83 /* HomeView.swift */,
 				3290A3862ABD171000399F13 /* LoginView.swift */,
@@ -195,6 +208,7 @@
 				3290A38A2ABD171300399F13 /* Assets.xcassets */,
 				3290A38C2ABD171300399F13 /* Preview Content */,
 				3299C0112ACE5D0800360803 /* RecordCircle.swift */,
+				3241528A2AD28669000F738C /* Utils.swift */,
 			);
 			path = conscious.ly;
 			sourceTree = "<group>";
@@ -341,8 +355,10 @@
 				3290A3872ABD171000399F13 /* LoginView.swift in Sources */,
 				3299C0122ACE5D0800360803 /* RecordCircle.swift in Sources */,
 				32C2E9182ACA0F41009FAA83 /* ContentView.swift in Sources */,
+				324152882AD27D10000F738C /* AudioRecordingService.swift in Sources */,
 				3290A3852ABD171000399F13 /* Consciously.swift in Sources */,
 				326C47EA2AC0E79700238BCA /* User.swift in Sources */,
+				3241528B2AD28669000F738C /* Utils.swift in Sources */,
 				32C2E91A2ACA10AE009FAA83 /* HomeView.swift in Sources */,
 				32E03F0B2AC2857700768603 /* SignUpView.swift in Sources */,
 				326C47B02ABF9A2400238BCA /* AuthViewModel.swift in Sources */,
