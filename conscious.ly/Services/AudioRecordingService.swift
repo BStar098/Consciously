@@ -17,9 +17,9 @@ class AudioRecordingService {
     
     
     private func setUpRecorder (){
-        let fileName = getDocumentsDirectory().appendingPathComponent(Date().formatted())
+        let fileName = getDocumentsDirectory().appendingPathComponent("\(Date().description(with: .current)).m4a")
         let settings: [String: Any] = [
-            AVFormatIDKey: Int(kAudioFormatLinearPCM),
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 44100.0,
             AVNumberOfChannelsKey: 2,
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
@@ -34,14 +34,15 @@ class AudioRecordingService {
     }
     
     func startRecording (){
-        if audioRecorder?.isRecording != nil && audioRecorder?.isRecording != true {
-            audioRecorder?.record()
+        if let recorder = audioRecorder, !recorder.isRecording {
+            recorder.record()
         }
     }
     
     func stopRecording (){
-        if audioRecorder?.isRecording != nil && audioRecorder?.isRecording == true {
-            audioRecorder?.stop()
+        if let recorder = audioRecorder, recorder.isRecording {
+            recorder.stop()
+            audioRecorder = nil
         }
     }
     

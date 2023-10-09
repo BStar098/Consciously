@@ -28,13 +28,16 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct Consciously: App {
     @StateObject var viewModel = AuthViewModel()
+    @StateObject var recordingViewModel = RecorderViewModel()
     
     // register app delegate for Firebase setup
       @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(viewModel)
+            ContentView()
+                .environmentObject(viewModel)
+                .environmentObject(recordingViewModel)
         }
     }
 }

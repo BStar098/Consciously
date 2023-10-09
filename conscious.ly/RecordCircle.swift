@@ -8,18 +8,16 @@
 import SwiftUI
 
 struct RecordCircle: View {
+    @EnvironmentObject var recordingViewModel : RecorderViewModel;
     @State var isAnimating : Bool = false
     @State var textColor : Color = .black;
-    @State var backgroundColor : Color = .white;
+    @State var backgroundColor : Color = .white;    
     let text : String;
     let duration : CGFloat;
     var body: some View {
             ZStack{
                 Circle()
                     .foregroundStyle(backgroundColor)
-                    
-
-                    
             Text(text)
                 .foregroundStyle(textColor)
                 .font(.title)
@@ -33,12 +31,21 @@ struct RecordCircle: View {
                 .onAppear{
                         self.isAnimating = true
                 }
+                .onTapGesture {
+                    if recordingViewModel.isRecording {
+                            recordingViewModel.stopRecording()
+                        } else {
+                            recordingViewModel.startRecording()
+                        }
+                    }
+                }
                 
         
                 
     }
-}
+
 
 #Preview {
     RecordCircle(text:"Afternoon",duration:2)
+        .environmentObject(RecorderViewModel())
 }
