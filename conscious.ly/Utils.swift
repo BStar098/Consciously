@@ -7,10 +7,16 @@
 
 import Foundation
 
+func getDocumentsDirectory () -> URL {
+    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    return paths[0]
+}
 
+func getCurrentISO8601Date() -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "dd-MM-yyyy'T'HH:mm:ss"
+    dateFormatter.timeZone = TimeZone.current
 
-    func getDocumentsDirectory () -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
-    
+    let iso8601Date = dateFormatter.string(from: Date())
+    return iso8601Date
 }

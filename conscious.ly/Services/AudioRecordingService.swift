@@ -17,7 +17,8 @@ class AudioRecordingService {
     
     
     private func setUpRecorder (){
-        let fileName = getDocumentsDirectory().appendingPathComponent("\(Date().description(with: .current)).m4a")
+        let fileName = getDocumentsDirectory().appendingPathComponent("\(getCurrentISO8601Date()).m4a")
+        print(fileName)
         let settings: [String: Any] = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 44100.0,

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		322E08402AD501C800A8D76F /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322E083F2AD501C800A8D76F /* Types.swift */; };
 		324152882AD27D10000F738C /* AudioRecordingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324152872AD27D10000F738C /* AudioRecordingService.swift */; };
 		3241528B2AD28669000F738C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3241528A2AD28669000F738C /* Utils.swift */; };
 		3241528D2AD3483E000F738C /* RecorderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3241528C2AD3483E000F738C /* RecorderViewModel.swift */; };
@@ -79,6 +80,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		322E083F2AD501C800A8D76F /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		324152872AD27D10000F738C /* AudioRecordingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecordingService.swift; sourceTree = "<group>"; };
 		3241528A2AD28669000F738C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3241528C2AD3483E000F738C /* RecorderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewModel.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		3290A3782ABD171000399F13 = {
 			isa = PBXGroup;
 			children = (
+				322E083F2AD501C800A8D76F /* Types.swift */,
 				3290A3832ABD171000399F13 /* conscious.ly */,
 				3290A3822ABD171000399F13 /* Products */,
 			);
@@ -364,6 +367,7 @@
 				324152882AD27D10000F738C /* AudioRecordingService.swift in Sources */,
 				3290A3852ABD171000399F13 /* Consciously.swift in Sources */,
 				326C47EA2AC0E79700238BCA /* User.swift in Sources */,
+				322E08402AD501C800A8D76F /* Types.swift in Sources */,
 				3241528B2AD28669000F738C /* Utils.swift in Sources */,
 				32C2E91A2ACA10AE009FAA83 /* HomeView.swift in Sources */,
 				32E03F0B2AC2857700768603 /* SignUpView.swift in Sources */,
@@ -505,7 +509,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "conscious-ly-Info.plist";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "";
+				INFOPLIST_KEY_NSDesktopFolderUsageDescription = "";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "";
+				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
+				INFOPLIST_KEY_NSFileProviderPresenceUsageDescription = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "In order to record your daily entries we need access to your microphone.";
+				INFOPLIST_KEY_OSBundleUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -536,7 +547,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "conscious-ly-Info.plist";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "";
+				INFOPLIST_KEY_NSDesktopFolderUsageDescription = "";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "";
+				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
+				INFOPLIST_KEY_NSFileProviderPresenceUsageDescription = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "In order to record your daily entries we need access to your microphone.";
+				INFOPLIST_KEY_OSBundleUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

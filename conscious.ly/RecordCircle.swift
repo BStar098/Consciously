@@ -32,6 +32,7 @@ struct RecordCircle: View {
                         self.isAnimating = true
                 }
                 .onTapGesture {
+                    print(recordingViewModel.isRecording)
                     if recordingViewModel.isRecording {
                             recordingViewModel.stopRecording()
                         } else {
