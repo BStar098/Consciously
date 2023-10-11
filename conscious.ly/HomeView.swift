@@ -26,5 +26,6 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView().environmentObject(AuthViewModel())
+    HomeView()
+        .environmentObject(AuthViewModel())
 }
