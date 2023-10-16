@@ -11,6 +11,7 @@
 		324152882AD27D10000F738C /* AudioRecordingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324152872AD27D10000F738C /* AudioRecordingService.swift */; };
 		3241528B2AD28669000F738C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3241528A2AD28669000F738C /* Utils.swift */; };
 		3241528D2AD3483E000F738C /* RecorderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3241528C2AD3483E000F738C /* RecorderViewModel.swift */; };
+		325D17302ADC5648008618C5 /* AudioNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325D172F2ADC5647008618C5 /* AudioNote.swift */; };
 		326C47AE2ABE680600238BCA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C47AD2ABE680600238BCA /* CustomTextField.swift */; };
 		326C47B02ABF9A2400238BCA /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C47AF2ABF9A2400238BCA /* AuthViewModel.swift */; };
 		326C47EA2AC0E79700238BCA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C47E92AC0E79700238BCA /* User.swift */; };
@@ -85,6 +86,7 @@
 		3241528A2AD28669000F738C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3241528C2AD3483E000F738C /* RecorderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewModel.swift; sourceTree = "<group>"; };
 		3241528E2AD35A7D000F738C /* conscious-ly-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "conscious-ly-Info.plist"; sourceTree = SOURCE_ROOT; };
+		325D172F2ADC5647008618C5 /* AudioNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioNote.swift; sourceTree = "<group>"; };
 		326C47AD2ABE680600238BCA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		326C47AF2ABF9A2400238BCA /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		326C47E92AC0E79700238BCA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				326C47E92AC0E79700238BCA /* User.swift */,
+				325D172F2ADC5647008618C5 /* AudioNote.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				3299C0122ACE5D0800360803 /* RecordCircle.swift in Sources */,
 				32C2E9182ACA0F41009FAA83 /* ContentView.swift in Sources */,
 				324152882AD27D10000F738C /* AudioRecordingService.swift in Sources */,
+				325D17302ADC5648008618C5 /* AudioNote.swift in Sources */,
 				3290A3852ABD171000399F13 /* Consciously.swift in Sources */,
 				326C47EA2AC0E79700238BCA /* User.swift in Sources */,
 				322E08402AD501C800A8D76F /* Types.swift in Sources */,

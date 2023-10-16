@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
-import SwiftData
 import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
 import AVFoundation
 
 class AppDelegate: NSObject, UIApplicationDelegate {

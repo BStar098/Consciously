@@ -14,9 +14,9 @@ func getDocumentsDirectory () -> URL {
 
 func getCurrentISO8601Date() -> String {
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "dd-MM-yyyy'T'HH:mm:ss"
+    dateFormatter.dateFormat = "dd-MM-yyyy"
     dateFormatter.timeZone = TimeZone.current
-
+    
     let iso8601Date = dateFormatter.string(from: Date())
     return iso8601Date
 }

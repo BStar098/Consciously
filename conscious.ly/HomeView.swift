@@ -14,9 +14,9 @@ struct HomeView: View {
             ZStack{
                 Color.black.ignoresSafeArea()
                 VStack {
-                    RecordCircle(text: "MORNING", duration: 3)
-                    RecordCircle(text: "AFTERNOON", duration: 5)
-                    RecordCircle(text: "NIGHT", duration: 7)
+                    RecordCircle(timeOfDay: .MORNING, duration: 3)
+                    RecordCircle(timeOfDay: .AFTERNOON, duration: 3)
+                    RecordCircle(timeOfDay: .EVENING, duration: 3)
                 }
             }
             
