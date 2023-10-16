@@ -10,22 +10,23 @@ import SwiftUI
 import AVFoundation
 
 final class RecorderViewModel : ObservableObject {
-    var audioRecorder : AVAudioRecorder?
+    var audioRecorder : AudioRecordingService  = AudioRecordingService()
+
     
     var isRecording: Bool {
-            audioRecorder?.isRecording ?? false
+        if let finalAudioRecorder = audioRecorder.audioRecorder {
+            return finalAudioRecorder.isRecording
+        } else {
+            return false
         }
-    
-    init () {
-        self.audioRecorder = AudioRecordingService().audioRecorder
     }
     
-    func startRecording() {
-        audioRecorder?.record()
+    func startRecording(timeOfDay: TimeOfDay) {
+        self.audioRecorder.startRecordingAudio(timeOfDay: timeOfDay)
     }
     
-    func stopRecording () {
-        audioRecorder?.stop()
+    func stopRecording (timeOfDay: TimeOfDay) {
+        self.audioRecorder.stopRecordingAndUploadAudio(timeOfDay:timeOfDay )
     }
     
 }
