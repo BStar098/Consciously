@@ -9,14 +9,19 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var viewModel : AuthViewModel
+    @EnvironmentObject var recordingViewModel : RecorderViewModel;
+
+    @State var firstCircleState : Bool = false;
+    @State var secondtCircleState : Bool = false;
+    @State var thirdCircleState : Bool = false;
     
     var body: some View {
             ZStack{
                 Color.black.ignoresSafeArea()
                 VStack {
                     RecordCircle(timeOfDay: .MORNING, duration: 3)
-                    RecordCircle(timeOfDay: .AFTERNOON, duration: 3)
-                    RecordCircle(timeOfDay: .EVENING, duration: 3)
+                    RecordCircle(timeOfDay: .AFTERNOON, duration: 2.5)
+                    RecordCircle(timeOfDay: .EVENING, duration: 3.6)
                 }
             }
             
