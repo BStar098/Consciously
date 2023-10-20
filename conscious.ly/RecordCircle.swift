@@ -9,39 +9,46 @@ import SwiftUI
 
 struct RecordCircle: View {
     @EnvironmentObject var recordingViewModel : RecorderViewModel;
-    @State var isAnimating : Bool = false
-    @State var textColor : Color = .black;
-    @State var backgroundColor : Color = .white;
+    @State var isRecording : Bool = false
+    var textColor : Color {
+        self.isRecording && recordingViewModel.isRecording ? .white : .black
+    }
+    var backgroundColor : Color {
+        self.isRecording ? .red : .white;
+    }
     let timeOfDay : TimeOfDay;
     let duration : CGFloat;
+    
     var body: some View {
-        ZStack{
-            Circle()
-                .foregroundStyle(backgroundColor)
-            Text(timeOfDay.rawValue)
-                .foregroundStyle(textColor)
-                .font(.title)
-                .fontWidth(.expanded)
-                .fontWeight(.semibold)
-        }
-        .scaleEffect(isAnimating ? 0.8 : 1)
-        .animation(
-            .easeInOut(duration:duration)
-            .repeatForever(),value:self.isAnimating)
-        .onAppear{
-            self.isAnimating = true
-        }
-        .onTapGesture {
-            if recordingViewModel.isRecording {
+        Button {
+            if recordingViewModel.isRecording && self.isRecording {
                 recordingViewModel.stopRecording(timeOfDay: timeOfDay)
-            } else {
+                self.isRecording = false
+            } else if !recordingViewModel.isRecording {
                 recordingViewModel.startRecording(timeOfDay: timeOfDay)
+                self.isRecording = true
+            }
+        } label: {
+            ZStack{
+                    Circle()
+                    .foregroundStyle(backgroundColor)
+                Text(isRecording ? "RECORDING" : timeOfDay.rawValue)
+                    .foregroundStyle(textColor)
+                    .font(.title)
+                    .fontWidth(.expanded)
+                    .fontWeight(.semibold)
             }
         }
+        .buttonStyle(ScaleButtonStyle())
     }
-    
-    
-    
+}
+
+struct ScaleButtonStyle : ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.8 : 1)
+            .animation(.easeInOut, value: configuration.isPressed)
+    }
 }
 
 
