@@ -17,7 +17,6 @@ struct RecordCircle: View {
         self.isRecording ? .red : .white;
     }
     let timeOfDay : TimeOfDay;
-    let duration : CGFloat;
     
     var body: some View {
         Button {
@@ -53,6 +52,6 @@ struct ScaleButtonStyle : ButtonStyle {
 
 
 #Preview {
-    RecordCircle(timeOfDay:.AFTERNOON,duration:2)
+    RecordCircle(timeOfDay:.AFTERNOON)
         .environmentObject(RecorderViewModel())
 }
