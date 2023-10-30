@@ -16,6 +16,7 @@ struct ContentView: View {
                 TabView {
                         RecordingView()
                         ProfileView()
+                        DatesList()
                 }
             } else {
                 LoginView()
