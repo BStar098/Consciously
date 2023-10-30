@@ -79,6 +79,9 @@
 		32C2E9182ACA0F41009FAA83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C2E9172ACA0F41009FAA83 /* ContentView.swift */; };
 		32C2E91A2ACA10AE009FAA83 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C2E9192ACA10AE009FAA83 /* RecordingView.swift */; };
 		32E03F0B2AC2857700768603 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E03F0A2AC2857700768603 /* SignUpView.swift */; };
+		32FEB9F12AEA333600DBEAEC /* DatesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FEB9F02AEA333600DBEAEC /* DatesList.swift */; };
+		32FEB9F32AECB66E00DBEAEC /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FEB9F22AECB66E00DBEAEC /* ListItem.swift */; };
+		32FEB9F52AECC95500DBEAEC /* DatesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FEB9F42AECC95500DBEAEC /* DatesListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +105,9 @@
 		32C2E9172ACA0F41009FAA83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		32C2E9192ACA10AE009FAA83 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
 		32E03F0A2AC2857700768603 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		32FEB9F02AEA333600DBEAEC /* DatesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatesList.swift; sourceTree = "<group>"; };
+		32FEB9F22AECB66E00DBEAEC /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		32FEB9F42AECC95500DBEAEC /* DatesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatesListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +219,9 @@
 				324152892AD27E30000F738C /* Services */,
 				32C2E9172ACA0F41009FAA83 /* ContentView.swift */,
 				32A4DE622AE4777700548FC7 /* ProfileView.swift */,
+				32FEB9F02AEA333600DBEAEC /* DatesList.swift */,
+				32FEB9F42AECC95500DBEAEC /* DatesListViewModel.swift */,
+				32FEB9F22AECB66E00DBEAEC /* ListItem.swift */,
 				32C2E9192ACA10AE009FAA83 /* RecordingView.swift */,
 				3290A3862ABD171000399F13 /* LoginView.swift */,
 				32E03F0A2AC2857700768603 /* SignUpView.swift */,
@@ -367,12 +376,15 @@
 			files = (
 				326C47AE2ABE680600238BCA /* CustomTextField.swift in Sources */,
 				3241528D2AD3483E000F738C /* RecorderViewModel.swift in Sources */,
+				32FEB9F32AECB66E00DBEAEC /* ListItem.swift in Sources */,
 				3290A3872ABD171000399F13 /* LoginView.swift in Sources */,
 				3299C0122ACE5D0800360803 /* RecordCircle.swift in Sources */,
 				32C2E9182ACA0F41009FAA83 /* ContentView.swift in Sources */,
 				324152882AD27D10000F738C /* AudioRecordingService.swift in Sources */,
 				325D17302ADC5648008618C5 /* AudioNote.swift in Sources */,
+				32FEB9F12AEA333600DBEAEC /* DatesList.swift in Sources */,
 				3290A3852ABD171000399F13 /* Consciously.swift in Sources */,
+				32FEB9F52AECC95500DBEAEC /* DatesListViewModel.swift in Sources */,
 				326C47EA2AC0E79700238BCA /* User.swift in Sources */,
 				322E08402AD501C800A8D76F /* Types.swift in Sources */,
 				3241528B2AD28669000F738C /* Utils.swift in Sources */,

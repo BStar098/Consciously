@@ -30,7 +30,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct Consciously: App {
     @StateObject var viewModel = AuthViewModel()
     @StateObject var recordingViewModel = RecorderViewModel()
-    
     // register app delegate for Firebase setup
       @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
