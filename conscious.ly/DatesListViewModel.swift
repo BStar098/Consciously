@@ -29,6 +29,7 @@ class DatesListViewModel : ObservableObject {
             }
             if let result = result {
                 self.datesList = result.prefixes
+                
             }
             
         }
