@@ -10,26 +10,27 @@ import SwiftUI
 struct DatesList: View {
     @ObservedObject var viewModel = DatesListViewModel()
     
-    
     var body: some View {
-                    ScrollView {
-                        Text("History")
-                            .font(.title)
-                            .bold()
-                            .padding()
-                            .frame(maxWidth:.infinity, alignment:.leading)
-                            ForEach(self.viewModel.datesList, id:\.name){date in
-                                return ListItem(icon:"mic.circle.fill", text:date.name)
-                            }
-                        Spacer()
+        NavigationStack {
+            ScrollView {
+                    ForEach(self.viewModel.datesList, id:\.name){date in
+                        NavigationLink(destination:AudiosView(date:date.name)){
+                            ListItem(icon:"mic.circle.fill", text:date.name)
+                        }
+                        
                     }
-        .padding(.horizontal)
-        .toolbarBackground(.white, for: .tabBar)
-        .toolbarBackground(.visible, for: .tabBar)
-        .tabItem { Label ("History", systemImage: "book") }
-        .onAppear {
-            self.viewModel.getRecordingsFolders()
-        }
+                Spacer()
+            }.navigationTitle("History")
+
+
+        }.padding(.horizontal)
+            .toolbarBackground(.white, for: .tabBar)
+            .toolbarBackground(.visible, for: .tabBar)
+            .tabItem { Label ("History", systemImage: "book") }
+            .onAppear {
+                self.viewModel.getRecordingsFolders()
+            }
+                  
     }
 }
 
