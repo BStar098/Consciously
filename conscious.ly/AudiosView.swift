@@ -21,7 +21,6 @@ struct AudiosView: View {
                                 Task {
                                     self.player.isPlaying ? self.player.pause() : try
                                     await self.player.play(file: audio)
-                                    print(self.player.isPlaying)
                                 }
                                
                         }

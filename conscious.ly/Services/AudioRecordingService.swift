@@ -58,7 +58,6 @@ class AudioRecordingService {
                     //error management
                     return
                 }
-                print(metadata)
             }
             audioRecorder = nil
         }
