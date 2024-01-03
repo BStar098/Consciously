@@ -11,6 +11,7 @@
 		324152882AD27D10000F738C /* AudioRecordingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324152872AD27D10000F738C /* AudioRecordingService.swift */; };
 		3241528B2AD28669000F738C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3241528A2AD28669000F738C /* Utils.swift */; };
 		3241528D2AD3483E000F738C /* RecorderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3241528C2AD3483E000F738C /* RecorderViewModel.swift */; };
+		3245DA1F2B3B2ADF00896ADE /* PlayingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245DA1E2B3B2ADF00896ADE /* PlayingCircle.swift */; };
 		325D17302ADC5648008618C5 /* AudioNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325D172F2ADC5647008618C5 /* AudioNote.swift */; };
 		326C47AE2ABE680600238BCA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C47AD2ABE680600238BCA /* CustomTextField.swift */; };
 		326C47B02ABF9A2400238BCA /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C47AF2ABF9A2400238BCA /* AuthViewModel.swift */; };
@@ -92,6 +93,7 @@
 		3241528A2AD28669000F738C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3241528C2AD3483E000F738C /* RecorderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewModel.swift; sourceTree = "<group>"; };
 		3241528E2AD35A7D000F738C /* conscious-ly-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "conscious-ly-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3245DA1E2B3B2ADF00896ADE /* PlayingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCircle.swift; sourceTree = "<group>"; };
 		325D172F2ADC5647008618C5 /* AudioNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioNote.swift; sourceTree = "<group>"; };
 		326C47AD2ABE680600238BCA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		326C47AF2ABF9A2400238BCA /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				3241528C2AD3483E000F738C /* RecorderViewModel.swift */,
 				326C47AD2ABE680600238BCA /* CustomTextField.swift */,
 				3299C0112ACE5D0800360803 /* RecordCircle.swift */,
+				3245DA1E2B3B2ADF00896ADE /* PlayingCircle.swift */,
 				3241528A2AD28669000F738C /* Utils.swift */,
 				3290A38A2ABD171300399F13 /* Assets.xcassets */,
 				3290A38C2ABD171300399F13 /* Preview Content */,
@@ -394,6 +397,7 @@
 				32FEB9F52AECC95500DBEAEC /* DatesListViewModel.swift in Sources */,
 				326C47EA2AC0E79700238BCA /* User.swift in Sources */,
 				322E08402AD501C800A8D76F /* Types.swift in Sources */,
+				3245DA1F2B3B2ADF00896ADE /* PlayingCircle.swift in Sources */,
 				3241528B2AD28669000F738C /* Utils.swift in Sources */,
 				32C2E91A2ACA10AE009FAA83 /* RecordingView.swift in Sources */,
 				32E03F0B2AC2857700768603 /* SignUpView.swift in Sources */,

@@ -8,7 +8,6 @@
 import Foundation
 import SwiftData
 
-@Model
 class User {
     let id : String;
     let fullname : String;

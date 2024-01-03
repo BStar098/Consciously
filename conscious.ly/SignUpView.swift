@@ -28,7 +28,7 @@ struct SignUpView: View {
                         }.frame(minHeight:geometry.size.height)
                     }
                 }
-                .alert(viewModel.signUpMessage,isPresented: $viewModel.showAlert){
+                .alert(viewModel.alertMessage,isPresented: $viewModel.showAlert){
                         Button("OK", role:.cancel){
                         }
                 }

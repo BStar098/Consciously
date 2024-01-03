@@ -24,7 +24,7 @@ struct LoginView: View {
                             loginButton
                             signUpButton
                     }
-                    .alert(viewModel.loginMessage,isPresented: $viewModel.showAlert){
+                    .alert(viewModel.alertMessage,isPresented: $viewModel.showAlert){
                         Button("OK", role:.cancel){
                         }
 
